@@ -1,0 +1,635 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    box-shadow: 0 0 5px 2px #E1E1E1;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f80000;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+nav span {
+    color: rgb(29, 19, 161);
+}
+
+nav .dark-mode {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 20px;
+    color: white;
+    border-radius: 40px;
+    cursor: pointer;
+    background: linear-gradient(#4f2ee8 0%, #dcdcdc 100%);
+}
+
+@keyframes move-forward {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(20px);
+    }
+}
+
+@keyframes move-backward {
+    0% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.forward {
+    animation: move-forward  forwards 1s;
+}
+
+.backward {
+    animation: move-backward 1s;
+}
+
+nav #dark-btn {
+    width: 17px;
+    height: 15px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+nav .nav-btn button{
+    padding: 0.7rem;
+    background-color: #0606CF;
+    border: none;
+    color: #FAFAFA;
+    border-radius: 5px;
+}
+
+nav .nav-btn button:hover {
+    cursor: pointer;
+    transition: all 0.5s ease;
+    background-color: #5757DF;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0;
+}
+
+h2 {
+    background-color: black;
+    color: white;
+    padding: 1rem 1.5rem;
+}
+
+.about-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about .row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 5rem;
+}
+
+.about .row input {
+    width: 200px;
+    padding: 0.5rem;
+    border: 1px solid #E5E5E5;
+}
+
+.achievements {
+    display: flex;
+    flex-direction: column; 
+    gap: 1rem;
+    margin-top: 4rem;  
+}
+
+.achievements .achievements-wrap {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.achievements .achievements-wrap input {
+    width: 300px;
+    padding: 0.5rem;
+}
+
+.same {
+    padding: 0.5rem 1rem;
+    background-color: #0606CF;
+    width: 40px;
+    border: none;
+    color: #FAFAFA;
+    border-radius: 5px;
+}
+
+
+.same:hover {
+    cursor: pointer;
+    transition: all 0.5s ease;
+    background-color: #5757DF;
+}
+
+.add-achievements {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.close-achieve {
+    right: 10%;
+    position: absolute;
+}
+
+.close:hover button{
+    cursor: pointer;
+    transition: all 0.5s ease;
+    background-color: #F44336;
+    color: white;
+    font-size: 18px;
+    padding: 2px 10px;
+}
+
+.close button{
+    position: absolute;
+    border: none;
+    font-size: 17px;
+    font-weight: 700;
+    background-color: red;
+    border-radius: 50px;
+    padding: 0 5px;
+}
+
+.height {
+    height: 0px;
+    overflow: hidden;
+    transition: height 1s ease;
+}
+
+/* common classes for education and experience starts here */
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 4rem;
+}
+
+.experience .experience-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.experience .row{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.experience .row input {
+    width: 300px;
+    padding: 0.5rem;
+}
+
+.experience .add-experience {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.experience .close {
+    right: 5%;
+    position: absolute;
+}
+
+.expheight {
+    height: 0px;
+    overflow: hidden;
+    transition: height 1s ease;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+
+.projects .projects-wrap {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.projects .projects-wrap input {
+    width: 300px;
+    padding: 0.5rem;
+}
+
+.projects .add-projects {
+    display: flex;
+    flex-direction: column;
+    /* gap: 1.5rem; */
+    /* margin-top: 1.5rem; */
+}
+
+.projects .close {
+    right: 2%;
+    position: absolute;
+}
+
+@media screen and (max-width: 975px) {
+    .expheight  {
+        height: 600px;
+    }
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 4rem;
+}
+
+.skills .skills-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    gap: 1rem;
+}
+
+.skills .skills-wrap input {
+    width: 20rem;
+    padding: 0.5rem;
+}
+
+@media screen and (max-width: 360px) {
+    main {
+        overflow: hidden;
+    }
+    .skills input {
+        width: 15rem;
+    }
+}
+
+.skills .skill-cont {
+    display: flex;
+}
+
+.skills .close {
+    position: absolute;
+    right: 29%;
+}
+
+.skillheight {
+    height: 0px;
+    overflow: hidden;
+    transition: height 1s ease;
+}
+
+.template {
+    display: flex;
+    border: 1px solid black;
+    margin-top: 4rem;
+}
+
+.template .left {
+    border: 1px solid black;
+    width: 25%; 
+    background-color: #163853;
+    color: white
+}
+
+.template .left .name {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    /* color: white; */
+    font-size: 20px;
+    margin-top: 15px;
+} 
+
+.template .left #image-cont {
+    display: none;
+}
+
+.template .left .separator {
+    height: 2px;
+    background-color: white;
+    margin: 10px 0;
+    width: 100px;
+    margin: 10px auto;
+}
+
+.sep-right {
+    margin : 10px 2px !important;
+    width: 110px !important;
+}
+
+.template .left .diff {
+    display: none;
+}
+
+.template .left .design {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;;
+}
+
+.template .left #image-cont img {
+    width: 75px;
+    height: 75px;
+    border: 5px solid white;
+    border-radius: 50px;
+}
+
+
+
+.template .left .about, .template .left .skill {
+    margin-left: 1rem;
+} 
+
+.template .left .about, .template .left .skill p {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.template .left .skill p::before {
+    content: "•";
+    /* color: #5C5C5C; */
+}
+
+.template .left .user-address::before {
+    content: "\f2bb";
+    font-family: "Font Awesome 5 Free";
+    margin-right: 5px; 
+    font-weight: 900;
+}
+
+.template .left .user-email::before {
+    content: "\f0e0";
+    font-family: "Font Awesome 5 Free";
+    margin-right: 5px;
+    font-weight: 900;
+}
+
+.template .left .user-phone::before {
+    content: "\f095";
+    font-family: "Font Awesome 5 Free";
+    margin-right: 5px;
+    font-weight: 900;
+}
+
+.template .left h3 {
+    color: white;
+    margin: 0;
+}
+
+.template .left .about-wrap p{
+    word-wrap: break-word;
+    white-space: normal;
+    font-size: 14px;
+}
+
+.template .right {
+    width: 75%;
+    background-color: #E6E6E6;
+}
+
+.template .right h3 {
+    margin: 10px 0; 
+    color: #193A55;
+}
+
+.divider {
+    width: 80%;
+    border-top: 2px solid #546C7F;
+}
+
+.template .right .edu, .template .right .exp, .template .right .project, .template .right .achieve, .template .right .profile{
+    margin: 2.2rem 1.2rem;
+}
+
+.template .right .profile p{
+    word-wrap: break-word;
+    color: #5C5C5C;
+}
+
+.template .right h4,.template .right p{
+    margin: 0;
+}
+
+.template .right .edu .education-wrapper p{
+    font-size: 15px;
+}
+
+.template .right .edu .education-wrapper .education {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.template .right .exp .user-exp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    gap: 1rem;
+}
+
+.template .right .exp .user-exp .inner-exp{
+    width: 90%;
+}
+
+.template .right .exp .exp-wrap .jobtitle{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.template .right .project .projects-cont .project-work a {
+    display: inline-block;
+    color: black;
+    margin: 1.5px 0;
+}
+
+.template .right .project .projects-cont .project-work .proj-title::before {
+    content: "◘";
+    margin-right: 5px;
+}
+
+.template .right .project .projects-cont .project-work p {
+    width: 80%;
+    word-wrap: break-word;
+}
+
+.template .right .exp .exp-wrap .jobdesc {
+    margin: 7px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    letter-spacing: 1px;
+}
+
+.template .right .exp .exp-wrap .jobdesc::before {
+    content: "◘";
+    margin-right: 5px;
+}
+
+.template .right h4{
+    margin-top: 10px;
+    color: #555555;
+}
+
+.template .right p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #757575;
+}
+
+.template .right .achievement {
+    margin-top: 1rem;
+}
+
+.template .right .achieve .achievement h4::before {
+    content: "▪";
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 557px){
+    .template .left {
+        width: 40%;
+    }
+}
+
+main .print {
+    margin: 2rem 1rem;
+}
+
+main .print #print-btn, .suggestions button {
+    background-color: #163853;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #163853;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+
+main .print #print-btn:hover,.suggestions button:hover {
+    background-color: transparent;
+    transition: all 0.5s ease;
+    color: black;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.2rem;
+    padding: 14px 0;
+    box-shadow: 0 0 2px 0px #E5E4E5;
+}
+
+footer * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer p {
+    color: #9CA3AF;
+    font-size: 14px;
+    text-align: center;
+    font-size: 18px;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+
+footer .social-icons svg {
+    width: 25px;
+}
+
+@media print {
+
+    body * {
+        visibility: hidden;
+    }
+    
+    .template, .template * {
+        visibility: visible;
+    }
+    .template {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.dark-effect {
+    background-color: #202024;
+    color: white;
+}
+
+.loader {
+    display: none;
+    margin: 2rem;
+    position: relative;
+    /* left: 45%; */
+    width: 100px;
+    height: 100px;
+  }
+  
+  .loader:before , .loader:after{
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    inset: 0;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3) inset;
+  }
+  .loader:after {
+    box-shadow: 0 2px 0 #FF3D00 inset;
+    animation: rotate 2s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% {  transform: rotate(0)}
+    100% { transform: rotate(360deg)}
+  }
+
+  .suggestions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+  }

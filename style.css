@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat' 'sans-serif';
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    box-shadow: 0 0 5px 2px #E1E1E1;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f80000;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+nav span {
+    color: rgb(29, 19, 161);
+}
+
+nav .dark-mode {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 20px;
+    color: white;
+    border-radius: 40px;
+    cursor: pointer;
+    background: linear-gradient(#4f2ee8 0%, #dcdcdc 100%);
+}
+
+@keyframes move-forward {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(20px);
+    }
+}
+
+@keyframes move-backward {
+    0% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.forward {
+    animation: move-forward  forwards 1s;
+}
+
+.backward {
+    animation: move-backward 1s;
+}
+
+nav #dark-btn {
+    width: 17px;
+    height: 15px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+nav .nav-btn button{
+    padding: 0.7rem;
+    background-color: #0606CF;
+    border: none;
+    color: #FAFAFA;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 1.5rem;
+}
+
+.hero h1 {
+    color: #0A0A0A;
+    text-align: center;
+    font-size: 35px;
+}
+
+.hero h1 span {
+    color: #1E40AF;
+}
+
+.hero p{
+    color: #9CA3AF;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.hero .hero-btn button {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: #0606CF;
+    border: none;
+    border-radius: 5px;
+}
+
+.hero .hero-btn button:hover {
+    transition: all 0.5ss ease;
+    cursor: pointer;
+    background-color: #5757DF;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(90deg, #6366f1 10%, #0ea5e9 30%,#10B981);
+    padding: 5rem 0;
+}
+
+.feature h1 {
+    margin-bottom: 1.5rem;
+}
+
+.flex img {
+    width: 200px;
+    height: 200px;
+}
+
+.feature .flex {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    width: 80%;
+}
+
+.flex .desc {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.flex .desc h2 {
+    color: #ffffff;
+}
+
+.desc p {
+    font-weight: 600;
+}
+
+.custom {
+    padding-left: 40%;
+}
+
+.easy-use {
+    padding-left: 40%;
+}
+
+.flex h1 {
+    color: #0A0A0A;
+}
+
+.templates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.templates h1 {
+    color: #0A0A0A;
+    padding: 5rem;
+}
+
+.templates img {
+    width: 70%;
+    height: 799px;
+}
+
+.bestmaker {
+    display: flex;
+    align-items: center;
+    background-color: #B8FBD4;
+    padding: 5rem;
+    margin-top: 4rem;
+}
+
+.bestmaker h2 {
+    text-align: center;
+}
+
+.bestmaker img {
+    width: 40%;
+    height: 400px;
+}
+
+.bestmaker .bestmaker-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.3rem;   
+}
+
+.bestmaker .bestmaker-content p {
+    text-align: center;
+    line-height: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.bestmaker .bestmaker-content button {
+    padding: 0.5rem 1rem;
+    border: none;
+    color: white;
+    background-color: #0606CF;
+    border-radius: 5px;
+}
+
+.bestmaker .bestmaker-content button:hover {
+    transition: all 0.5s ease;
+    cursor: pointer;
+    background-color: #5757DF;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.5rem 0;
+}
+
+footer p {
+    color: #9CA3AF;
+    font-size: 14px;
+    text-align: center;
+    font-size: 18px;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+
+footer .social-icons svg {
+    width: 20px;
+}
+
+@media screen and (max-width: 750px) {
+    .feature .custom ,.feature .easy-use{
+        padding-left: 30%;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .feature .custom ,.feature .easy-use{
+        padding-left: 5%;
+    }
+    .bestmaker {
+        flex-direction: column;
+    }
+    .bestmaker img {
+        width: 80%;
+    }
+    .templates img {
+        width: 89%;
+        height: 700px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .feature {
+        gap: 5rem;
+        align-items: center;
+    }
+    .feature .custom , .feature .easy-use{
+        flex-direction: column-reverse !important;
+        gap: 1rem;
+    }
+    .feature .custom ,.feature .easy-use{
+        padding-left: 0%;
+    }
+    .feature .flex {
+        flex-direction: column;
+    }
+    .bestmaker img {
+        width: 100%;
+        height: 250px;
+    }
+    .templates img {
+        width: 100%;
+        height: 550px;
+    }
+}
+
+.dark-effect {
+    background-color: #202024;
+}
+
+.dark-effect h1 {
+    color: white;
+}
+
+.dark-effect .feature {
+    background: linear-gradient(135deg, #2d2d72, #000000);
+}
+
+.dark-effect .bestmaker {
+    background: linear-gradient(135deg, #01796F, #000000);
+
+}
+
+.dark-effect .bestmaker h2 {
+    color: white;
+}
+
+.dark-effect .bestmaker img {
+    border-radius: 10px;
+    margin-left: 1rem;
+}
+
+.dark-effect .bestmaker p {
+    color: #f6f6f6c2;
+    font-size: 17px;
+}
