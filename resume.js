@@ -279,7 +279,7 @@ eduenddate.addEventListener('keyup',(e)=> updateEducation(e));
 edudescription.addEventListener('keyup',(e)=> updateEducation(e));
 
 edubtn.addEventListener('click',()=>{
-    row = document.createElement('div');
+    let row = document.createElement('div');
     row.classList.add('experience-wrap','expheight');
     let mediumQuery = window.matchMedia("(max-width: 975px)");
     let smallQuery = window.matchMedia("(width<=655px)");
@@ -439,7 +439,10 @@ projectbtn.addEventListener('click',()=>{
         let projectRow = e.target.parentElement.parentElement;
         projectRow.style.height = '0px';
         let correspondingDiv = projectCont.querySelector('.project-work:last-child');
-        correspondingDiv.remove();
+        if (correspondingDiv) {
+            correspondingDiv.remove();
+        }
+        // row.querySelector('.closeProject').style.display = 'none';
         setTimeout(() => projectRow.remove(),1000);
     });
 });
