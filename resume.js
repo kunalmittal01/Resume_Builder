@@ -602,7 +602,7 @@ suggestionBtn.addEventListener('click', async(e)=>{
     suggestionCont.innerText = '';
     loader.style.display = 'block';
     if(checkSkills()) {
-        suggestionCont.innerText = 'Error in fetching the results. Please try again later.';
+        suggestionCont.innerText = 'Please enter more details for suggestions.';
         loader.style.display = 'none';
         return;
     }
@@ -624,7 +624,7 @@ projectSuggestionBtn.addEventListener('click',async(e)=>{
     suggestionCont.innerText = '';
     loader.style.display = 'block';
     if(checkSkills()) {
-        suggestionCont.innerText = 'Error in fetching the results. Please try again later.';
+        suggestionCont.innerText = 'Please enter more details for suggestions.';
         loader.style.display = 'none';
         return;
     }
