@@ -587,41 +587,22 @@ summary.addEventListener('keyup', addSummary);
 //   https://autocomplete.indeed.com/api/v0/suggestions/what?country=IN&language=en&count=10&formatted=1&query=sql
 // https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=cfb324a0&app_key=5e580830e95dd410d2ff127c317eb87b
 let suggestionBtn = document.getElementById('suggestionbtn');
-let result = [];
-
-// async function fetchResults(skill) {
-//     console.log(skill)
-//     try{
-
-//         // let res = await fetch(`https://autocomplete.indeed.com/api/v0/suggestions/what?country=IN&language=en&count=10&formatted=1&query=${skill}}`,{mode: 'no-cors'});
-//         let res = await fetch(`https://cors-anywhere.herokuapp.com/https://autocomplete.indeed.com/api/v0/suggestions/what?country=IN&language=en&count=10&formatted=1&query=${skill}`);
-
-//         let data = await res.json();
-//         // console.log(data);
-//         return data;
-//     }catch(err){
-//         console.log(err);
-//     }
-//     // return data;
-// }
-
-// function getAndFetch() {
-//     console.log(skillArr)
-//     skillArr.forEach(async (skill) => {
-//         let data = await fetchResults(skill);
-//         console.log(data);
-//         // return data;
-        
-//     })
-// }
 let loader = document.querySelector('.loader');
 let suggestionCont = document.getElementById('suggestions-cont');
 let projectSuggestionBtn = document.getElementById('project-suggest-btn');
 
+function checkSkills() {
+    return skillArr.length == 0;
+}
 import { getAndFetch } from './jobSuggestions.js';
 suggestionBtn.addEventListener('click', async(e)=>{
-    loader.style.display = 'block';
     suggestionCont.innerText = '';
+    loader.style.display = 'block';
+    if(checkSkills()) {
+        suggestionCont.innerText = 'Error in fetching the results. Please try again later.';
+        loader.style.display = 'none';
+        return;
+    }
     let data = await getAndFetch(skillArr,e.target.id);
     console.log(JSON.stringify(data));
     
@@ -637,8 +618,13 @@ function displayData(data) {
 }
 
 projectSuggestionBtn.addEventListener('click',async(e)=>{
-    loader.style.display = 'block';
     suggestionCont.innerText = '';
+    loader.style.display = 'block';
+    if(checkSkills()) {
+        suggestionCont.innerText = 'Error in fetching the results. Please try again later.';
+        loader.style.display = 'none';
+        return;
+    }
     let data = await getAndFetch(skillArr,e.target.id);
     console.log(JSON.stringify(data));
     displayData(data);
