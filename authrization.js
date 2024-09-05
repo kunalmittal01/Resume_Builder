@@ -10,6 +10,8 @@ let terms = document.getElementById('terms');
 
 formSignbtn.addEventListener('click',(e) => {
     e.preventDefault();
+    let user = name.value;
+    localStorage.setItem('username',user);
     validateUp(name,email,pass,confirmPass);
 }); 
 
@@ -43,16 +45,8 @@ formUp.addEventListener('click', function() {
 formSignin.addEventListener('click',()=>{
     let res = validateIn(email,pass);
     if(res == 'success') {
-        // let modal = document.getElementsByClassName('form')[0];
-        // let main = document.getElementsByClassName('main')[0];
         localStorage.setItem('state','loggedIn');
         setTimeout(()=>{
-            // document.getElementsByClassName('log-out')[0].style.display = 'flex';
-            // document.getElementsByClassName('home-shop')[0].style.display = 'flex';
-            // signbtn.style.display = 'none';
-            // main.style.display = 'flex';
-            // modal.style.display = 'none';
-            // document.querySelector('body').classList.remove('bg-color');
             window.location.href = 'resume.html';
         },3100);
     }

@@ -1,4 +1,6 @@
 let logout = document.getElementById('logout');
+let greet = document.getElementById('nav-mssg');
+greet.innerHTML = `<p><span>Welcome,</span> ${localStorage.getItem('username')}</p>`;
 logout.addEventListener('click', () => {
     localStorage.removeItem('state');
     window.location.href = 'index.html';

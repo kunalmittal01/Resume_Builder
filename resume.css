@@ -1,5 +1,5 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 nav {
@@ -19,6 +19,12 @@ nav a {
 
 nav span {
     color: rgb(29, 19, 161);
+}
+
+.nav-wrap {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 nav .dark-mode {
@@ -79,10 +85,28 @@ nav .nav-btn button:hover {
     background-color: #5757DF;
 }
 
+#nav-mssg {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    font-weight: 700;
+    color: #0606CF;
+    font-size: 20px;
+}
+
+#nav-mssg span {
+    color: #202024;
+    font-size: 16px;
+}
+
+.dark-effect #nav-mssg span {
+    color: white !important;
+}
+
 .about {
     display: flex;
     flex-direction: column;
-    margin: 3rem 0;
+    margin: 1rem 0 3rem 0;
 }
 
 h2 {

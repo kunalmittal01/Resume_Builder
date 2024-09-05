@@ -166,6 +166,15 @@ main .images p:hover {
     font-size: 20px;
 }
 
+.message-box p{
+    color: white;
+}
+
+
+.message-box p::before {
+    content: "*";
+}
+
 .slide-in-elliptic-left-fwd {
     animation: slide-in-elliptic-left-fwd 2s cubic-bezier(.25,.46,.45,.94) both
 }
