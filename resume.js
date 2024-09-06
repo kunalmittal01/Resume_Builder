@@ -616,9 +616,9 @@ suggestionBtn.addEventListener('click', async(e)=>{
 
 function displayData(data) {
     loader.style.display = 'none';
-    suggestionCont.innerHTML = data.map(ele => JSON.parse(JSON.stringify(ele)).response.candidates[0].content.parts[0].text.split('#').join("").split('*').join('')).join('\n');
-    if(suggestionCont.innerHTML == '') {
-        suggestionCont.innerHTML = 'Error in fetching the results. Please try again later.'
+    suggestionCont.innerText = data.map(ele => JSON.parse(JSON.stringify(ele)).response.candidates[0].content.parts[0].text.split('#').join("").split('*').join('')).join('\n');
+    if(suggestionCont.innerText == '') {
+        suggestionCont.innerText = 'Error in fetching the results. Please try again later.'
     }
 }
 

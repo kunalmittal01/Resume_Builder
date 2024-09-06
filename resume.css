@@ -336,8 +336,9 @@ h2 {
 
 .template {
     display: flex;
-    border: 1px solid black;
     margin-top: 4rem;
+    width: 80%;
+    margin-inline: auto;
 }
 
 .template .left {
@@ -549,7 +550,8 @@ h2 {
 }
 
 main .print {
-    margin: 2rem 1rem;
+    text-align: center;
+    margin: 2rem 0;
 }
 
 main .print #print-btn, .suggestions button {
@@ -613,8 +615,9 @@ footer .social-icons svg {
     .template {
         position: absolute;
         left: 0;
-        top: 0;
-        width: 100%;
+        top: -12px;
+        width: 90%;
+        margin: 0 5%;
     }
 }
 
