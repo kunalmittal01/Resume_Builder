@@ -5,7 +5,7 @@ if(localStorage.getItem('state') == 'loggedIn') {
 
 let template = document.getElementById('temp-disp');
 
-let images = ['assets/temp1.png', 'assets/temp2.jpg', 'assets/temp3.jpg','assets/temp4.png']; 
+let images = ['assets/temp1.png', 'assets/temp2.jpg', 'assets/temp3.jpg','assets/temp4.png','assets/temp5.png','assets/template6.jpg','assets/temp7.webp']; 
 
 let img_cnt = 0;
 function displayImages() {
